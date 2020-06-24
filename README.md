@@ -11,12 +11,10 @@ Back End
 Front End
 ---------
 
-(✔) Utilizar Projeto Base - yarn 
-(✔) Limpar componentes desnecessários do
-   projeto base
+(✔) Criar projeto frontend (npx create-react-app frontend) e colocar backend dentro
+(✔) Limpar componentes desnecessários
 
-(✔) Criar pasta 'api' e arquivo 'apiService.js',
-   contendo:
+(✔) Criar pasta 'api' e arquivo 'apiService.js', contendo:
    (✔) Utilização do pacote axios
    (✔) Objeto API_URL
    (✔) Objeto GRADE_VALIDATION
@@ -38,7 +36,7 @@ Front End
        2) subject
        3) student
 
-     (✔) Por fim, retorna as notas
+  (✔) Por fim, retorna as notas
 
    (✔) Função assíncrona insertGrade, que
      recebe uma nota, grava na API com
@@ -118,34 +116,34 @@ Componentes:
    (✔) Chavear a exibição de ícones de inserção,
      edição e exclusão
 
-() ModalGrade
+(✔) ModalGrade
    (✔) Visível apenas se "isModalOpen" for true
    (✔) Props:
      (✔) onSave => handlePersistData
      (✔) onClose => handleCloseModal
      (✔) selectedGrade => selectedGrade  
 
-     (✔) State:
-       (✔) gradeValue
-       (✔) gradeValidation
-       (✔) errorMessage
+  (✔) State:
+    (✔) gradeValue
+    (✔) gradeValidation
+    (✔) errorMessage
 
-     (✔) Effects:
-       (✔) Obter validação de apiService [type]
-       (✔) Validação da nota [gradeValue, gradeValidation]
-       (✔) EventListener de keydown, para monitorar a tecla "Esc",
-         que deve cancelar a persistência e fechar a modal
+  (✔) Effects:
+    (✔) Obter validação de apiService [type]
+    (✔) Validação da nota [gradeValue, gradeValidation]
+    (✔) EventListener de keydown, para monitorar a tecla "Esc",
+      que deve cancelar a persistência e fechar a modal
 
-     (✔) Montar modal a partir da biblioteca react-modal
-       (✔) Mostrar nome do aluno, disciplina e tipo de
-         avaliação com inputs 'readOnly'
-       (✔) Tornar o botão "Salvar" desabilitado caso a nota
-         esteja em um intervalo diferente do minValue e
-         maxValue, conforme gradeValidation
-    
-     (✔) Funções importantes:
-       (✔) handleKeyDown, para monitorar a tecla "Esc"
-       (✔) handleGradeChange, para persistir o valor da nota
-       (✔) handleModalClose, para fechar a modal sem persistência
-       (✔) handleFormSubmit, para obter os dados e persistir
-         a nota em App.js
+  (✔) Montar modal a partir da biblioteca react-modal
+    (✔) Mostrar nome do aluno, disciplina e tipo de
+      avaliação com inputs 'readOnly'
+    (✔) Tornar o botão "Salvar" desabilitado caso a nota
+      esteja em um intervalo diferente do minValue e
+      maxValue, conforme gradeValidation
+
+  (✔) Funções importantes:
+    (✔) handleKeyDown, para monitorar a tecla "Esc"
+    (✔) handleGradeChange, para persistir o valor da nota
+    (✔) handleModalClose, para fechar a modal sem persistência
+    (✔) handleFormSubmit, para obter os dados e persistir
+      a nota em App.js
