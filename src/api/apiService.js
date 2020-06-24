@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 // obs: no backend foi escolhida a porta 3001
 const API_URL = 'http://localhost:3001/grade/';
 
@@ -52,6 +51,12 @@ async function getAllGrades() {
   grades.forEach((grade) => allGradeTypes.add(grade.type));
   allGradeTypes = Array.from(allGradeTypes);
 
+  let maxId = -1;
+  grades.forEach(({ id }) => {
+    if (id > maxId) maxId = id;
+  });
+  let nextId = grades.length + 1;
+
   const allCombinations = [];
   allStudents.forEach((student) => {
     allSubjects.forEach((subject) => {
@@ -68,18 +73,20 @@ async function getAllGrades() {
   //Pega todas combinações de aluno, disciplina e notas:
   allCombinations.forEach(({ student, subject, type }) => {
     const hasItem = grades.find((grade) => {
-      grade.subject === subject &&
+      return (
+        grade.subject === subject &&
         grade.student === student &&
-        grade.type === type;
+        grade.type === type
+      );
     });
 
-    //Verifica se as combinações anteriores não estão na api:
+    //Popula as combinações que não estão na api:
     if (!hasItem) {
       //Chegam aqui as combinações excluídas. Cada uma deve ser
       //exibida na tela posteriormente, mas com o traço ao invés
       //da nota e o símbolo de '+' para possibilitar a inserção.
       grades.push({
-        id: grades.length + 1,
+        id: nextId + 1,
         student,
         studentLowerCase: student.toLowerCase(),
         subject,
@@ -92,7 +99,15 @@ async function getAllGrades() {
     }
   });
 
-  return allCombinations;
+  //Ordenar por: (obs: os últimos [a ordenar] serão os primeiros [mostrados])
+  //  1) type
+  //  2) subject
+  //  3) student
+  grades.sort((a, b) => a.typeLowerCase.localeCompare(b.typeLowerCase));
+  grades.sort((a, b) => a.subjectLowerCase.localeCompare(b.subjectLowerCase));
+  grades.sort((a, b) => a.studentLowerCase.localeCompare(b.studentLowerCase));
+
+  return grades;
 }
 
 export { getAllGrades };
