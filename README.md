@@ -4,9 +4,7 @@ Desenvolvi este app seguindo o roteiro abaixo ✔
 Back End
 --------
 
-(✔) Fiz e publiquei no github algo bem similar, chamado backend-school-grades-api.
-(✔) Nesse projeto usei como base o código 'Back End' fornecido pelo Rafael Gomide, professor no IGTI.
-
+(✔) Não detalharei o Back End, pois anteriormente fiz e publiquei no github algo bem similar, chamado backend-school-grades-api.
 
 Front End
 ---------
