@@ -1,4 +1,4 @@
-Desenvolvi este app seguindo o roteiro abaixo, do curso Desenvolvedor Full Stack, por IGTI ✔ 
+Desenvolvi este app seguindo o roteiro abaixo ✔ 
 =====================
 
 Back End
