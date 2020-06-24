@@ -110,4 +110,35 @@ async function getAllGrades() {
   return grades;
 }
 
-export { getAllGrades };
+async function insertGrade(grade) {
+  const response = await axios.post(API_URL, grade);
+  return response.data.id;
+}
+
+//recebe uma nota, grava na API e retorna os dados recebidos da API
+async function updateGrade(grade) {
+  const response = await axios.put(API_URL, grade);
+  return response.data;
+}
+
+async function deleteGrade(grade) {
+  const response = await axios.delete(`${API_URL}/${grade.id}`);
+  return response.data;
+}
+
+//recebe um tipo de nota, busca em GRADE_VALIDATION e retorna min e max Value
+async function getValidationFromGradeType(gradeType) {
+  const gradeValidation = GRADE_VALIDATION.find(
+    (item) => item.gradeType === gradeType
+  );
+  const { minValue, maxValue } = gradeValidation;
+  return { minValue: minValue, maxValue: maxValue };
+}
+
+export {
+  getAllGrades,
+  insertGrade,
+  updateGrade,
+  deleteGrade,
+  getValidationFromGradeType,
+};
