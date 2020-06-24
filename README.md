@@ -1,68 +1,151 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Desenvolvi este app seguindo o roteiro abaixo, do curso Desenvolvedor Full Stack, por IGTI ✔ 
+=====================
 
-## Available Scripts
+Back End
+--------
 
-In the project directory, you can run:
+(✔) Fiz e publiquei no github algo bem similar, chamado grades-escolares-api.
+(✔) Nesse projeto usei como base o código 'Back End' fornecido pelo Rafael Gomide, professor no IGTI.
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Front End
+---------
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+(✔) Utilizar Projeto Base - yarn 
+(✔) Limpar componentes desnecessários do
+   projeto base
 
-### `yarn test`
+(✔) Criar pasta 'api' e arquivo 'apiService.js',
+   contendo:
+   (✔) Utilização do pacote axios
+   (✔) Objeto API_URL
+   (✔) Objeto GRADE_VALIDATION
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   (✔) Função assíncrona getAllGrades, que:
+     (✔) Traz todas notas da API
+     (✔) Transforma dados para facilitar
+       comparações, com valores lowercase
+     (✔) Inserir flag isDeleted
+     (✔) Verifica notas faltantes
+     (✔) Preenche as notas com os
+       registros faltantes com 0
+       e flag de exclusão lógica 
+       isDeleted = true
+     (✔) Insere as notas faltantes no
+       vetor de notas
+     (✔) Ordena por:
+       1) type
+       2) subject
+       3) student
 
-### `yarn build`
+     (✔) Por fim, retorna as notas
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   (✔) Função assíncrona insertGrade, que
+     recebe uma nota, grava na API com
+     axios.post e retorna os dados
+     recebidos da API.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+   (✔) Função assíncrona updateGrade, que
+     recebe uma nota, grava na API com
+     axios.put e retorna os dados
+     recebidos da API.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   (✔) Função assíncrona deleteGrade, que
+     recebe uma nota, grava na API com
+     axios.post e retorna os dados
+     recebidos da API.
 
-### `yarn eject`
+   (✔) Função getValidationFromGradeType,
+     que recebe um tipo de nota, busca
+     em GRADE_VALIDATION com array.find 
+     e retorna os dados de minValue e
+     maxValue
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  (✔) exporta as seguintes funções:
+    getAllGrades, insertGrade,
+    updateGrade, deleteGrade,
+    getValidationFromGradeType
+     
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+App.js
+------
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+(✔) Criar state para:
+   (✔) allGrades []
+   (✔) selectedGrade {}
+   (✔) isModalOpen false
+   
+(✔) Criar effect para:
+   (✔) Carga de dados da api []
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+(✔) Criar título "Controle de notas"
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Componentes:
+------------
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+(✔) Spinner a partir do Materialize
+   (✔) Testar em App.js
+   (✔) Deve ser exibido somente enquanto
+     'allGrades' estiver com 
+     length === 0
 
-### Code Splitting
+(✔) GradesControl com as seguintes props:
+   (✔) grades => allGrades
+   (✔) onDeleteGrade => handleDeleteGrade em App.js
+   (✔) onPersistGrade => handlePersistGrade em App.js
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+   (✔) Visível somente se 'allGrades' estiver
+     com length > 0
 
-### Analyzing the Bundle Size
+   (✔) Criar array tableGrades, que será composta
+     de diversos arrays agrupados por nome e
+     disciplina.
+   (✔) Para isso, percorremos grades com forEach
+     e controlamos a mudança de subject e student
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+   (✔) Montamos a tela percorrendo tableGrades,
+     gerando n tabelas
 
-### Making a Progressive Web App
+   (✔) Isolamos as ações de inserção, edição e 
+     exclusão no componente Action
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+   (✔) Funções importantes: handlePersist e
+     handleDelete, que invocarão as props
+     correspondentes que chegaram de App.js,
+     enviando a nota a ser persistida/excluída
 
-### Advanced Configuration
+   (✔) Chavear a exibição de ícones de inserção,
+     edição e exclusão
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+() ModalGrade
+   (✔) Visível apenas se "isModalOpen" for true
+   (✔) Props:
+     (✔) onSave => handlePersistData
+     (✔) onClose => handleCloseModal
+     (✔) selectedGrade => selectedGrade  
 
-### Deployment
+     (✔) State:
+       (✔) gradeValue
+       (✔) gradeValidation
+       (✔) errorMessage
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+     (✔) Effects:
+       (✔) Obter validação de apiService [type]
+       (✔) Validação da nota [gradeValue, gradeValidation]
+       (✔) EventListener de keydown, para monitorar a tecla "Esc",
+         que deve cancelar a persistência e fechar a modal
 
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+     (✔) Montar modal a partir da biblioteca react-modal
+       (✔) Mostrar nome do aluno, disciplina e tipo de
+         avaliação com inputs 'readOnly'
+       (✔) Tornar o botão "Salvar" desabilitado caso a nota
+         esteja em um intervalo diferente do minValue e
+         maxValue, conforme gradeValidation
+    
+     (✔) Funções importantes:
+       (✔) handleKeyDown, para monitorar a tecla "Esc"
+       (✔) handleGradeChange, para persistir o valor da nota
+       (✔) handleModalClose, para fechar a modal sem persistência
+       (✔) handleFormSubmit, para obter os dados e persistir
+         a nota em App.js

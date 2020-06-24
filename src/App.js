@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import * as api from './api/apiService';
+
+// export default function App() {
 function App() {
+  const testApi = async () => {
+    // console.log(await api.getAllGrades());
+    const res = await api.getAllGrades();
+    console.log(res);
+  };
+  testApi();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="App-header">Eae Dé</header>
     </div>
   );
 }
 
-export default App;
+export default App; //pode dar o export antes de function
