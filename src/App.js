@@ -6,6 +6,7 @@ import Spinner from './components/Spinner';
 
 import '../node_modules/materialize-css/dist/css/materialize.min.css';
 import '../node_modules/materialize-css/dist/js/materialize.min';
+import GradesControl from './components/GradesControl';
 
 // export default function App() {
 function App() {
@@ -37,13 +38,27 @@ function App() {
   //   });
   // }, []);
 
+  const handleDelete = () => {
+    console.log('handleDelete');
+  };
+
+  const handlePersist = () => {
+    console.log('handlePersist');
+  };
+
   return (
     <div className="App">
       {/* <div className="container"> */}
       <header className="App-header">
         <h1 className="center">Controle de notas</h1>
-        {allGrades.length > 0 && <p>Notas disponíveis</p>}
         {allGrades.length == 0 && <Spinner />}
+        {allGrades.length > 0 && (
+          <GradesControl
+            grades={allGrades}
+            onDelete={handleDelete}
+            onPersist={handlePersist}
+          />
+        )}
       </header>
     </div>
   );
