@@ -1,9 +1,16 @@
 import React from 'react';
 
-export default function Action({ id, type }) {
+export default function Action({ id, type, onActionClick }) {
+  const handleIconClick = () => {
+    onActionClick(id, type);
+  };
   return (
     <div>
-      <i class="material-icons" style={{ cursor: 'pointer' }}>
+      <i
+        className="material-icons"
+        style={{ cursor: 'pointer' }}
+        onClick={handleIconClick}
+      >
         {type}
       </i>
     </div>
