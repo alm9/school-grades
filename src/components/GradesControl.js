@@ -36,8 +36,10 @@ export default function GradesControl({ grades, onDelete, onPersist }) {
   console.log(tableGrades);
 
   const handleActionClick = (id, type) => {
-    console.log(id);
-    console.log(type);
+    const grade = grades.find((grade) => grade.id === id);
+    if (type === 'delete') {
+      onDelete(grade);
+    }
   };
 
   //O materialize fornece a classe 'striped', que distingue uma linha da outra:
@@ -50,7 +52,7 @@ export default function GradesControl({ grades, onDelete, onPersist }) {
           finalGrade >= 70 ? styles.goodGrade : styles.badGrade;
 
         return (
-          <table className="striped" key={id}>
+          <table style={styles.table} className="striped" key={id}>
             <thead>
               <tr>
                 <th style={{ width: '20%' }}>Aluno</th>
@@ -118,5 +120,9 @@ const styles = {
   badGrade: {
     fontWeight: 'bold',
     color: 'red',
+  },
+  table: {
+    margin: '20px',
+    padding: '10px',
   },
 };

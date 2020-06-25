@@ -4498,3 +4498,100 @@
 2020-06-25T19:35:32.621Z [grades-control-api] info: POST /grade - {"id":26,"student":"Neal Morse","subject":"02 - Node","type":"Desafio","value":47,"timestamp":"2020-06-25T19:35:32.620Z"}
 2020-06-25T19:35:32.622Z [grades-control-api] info: POST /grade - {"id":27,"student":"Neal Morse","subject":"03 - React","type":"Desafio","value":14,"timestamp":"2020-06-25T19:35:32.621Z"}
 2020-06-25T19:35:41.389Z [grades-control-api] info: GET /grade
+2020-06-25T19:48:35.018Z [grades-control-api] info: GET /grade
+2020-06-25T19:48:50.093Z [grades-control-api] info: GET /grade
+2020-06-25T19:49:00.083Z [grades-control-api] info: GET /grade
+2020-06-25T19:49:07.245Z [grades-control-api] info: GET /grade
+2020-06-25T19:49:13.230Z [grades-control-api] info: GET /grade
+2020-06-25T19:49:28.199Z [grades-control-api] info: GET /grade
+2020-06-25T19:50:38.338Z [grades-control-api] info: GET /grade
+2020-06-25T19:52:49.088Z [grades-control-api] info: GET /grade
+2020-06-25T19:54:23.309Z [grades-control-api] info: GET /grade
+2020-06-25T19:57:59.830Z [grades-control-api] info: GET /grade
+2020-06-25T19:58:10.007Z [grades-control-api] info: GET /grade
+2020-06-25T19:58:56.867Z [grades-control-api] info: GET /grade
+2020-06-25T19:59:14.063Z [grades-control-api] info: GET /grade
+2020-06-25T19:59:36.238Z [grades-control-api] info: GET /grade
+2020-06-25T19:59:51.557Z [grades-control-api] info: GET /grade
+2020-06-25T19:59:57.265Z [grades-control-api] info: GET /grade
+2020-06-25T20:00:11.335Z [grades-control-api] info: GET /grade
+2020-06-25T20:00:44.571Z [grades-control-api] info: GET /grade
+2020-06-25T20:00:56.864Z [grades-control-api] info: GET /grade
+2020-06-25T20:01:12.129Z [grades-control-api] info: GET /grade
+2020-06-25T20:01:54.146Z [grades-control-api] info: GET /grade
+2020-06-25T20:03:20.507Z [grades-control-api] info: GET /grade
+2020-06-25T20:04:13.128Z [grades-control-api] info: GET /grade
+2020-06-25T20:04:44.667Z [grades-control-api] info: GET /grade
+2020-06-25T20:04:58.435Z [grades-control-api] info: GET /grade
+2020-06-25T20:05:22.258Z [grades-control-api] info: GET /grade
+2020-06-25T20:06:36.223Z [grades-control-api] info: GET /grade
+2020-06-25T20:12:51.566Z [grades-control-api] info: GET /grade
+2020-06-25T20:13:28.706Z [grades-control-api] info: GET /grade
+2020-06-25T20:13:40.712Z [grades-control-api] info: GET /grade
+2020-06-25T20:14:10.578Z [grades-control-api] info: GET /grade
+2020-06-25T20:16:49.350Z [grades-control-api] info: GET /grade
+2020-06-25T20:18:52.778Z [grades-control-api] info: GET /grade
+2020-06-25T20:24:22.055Z [grades-control-api] info: GET /grade
+2020-06-25T20:25:12.368Z [grades-control-api] info: GET /grade
+2020-06-25T20:25:30.669Z [grades-control-api] info: GET /grade
+2020-06-25T20:25:41.931Z [grades-control-api] info: GET /grade
+2020-06-25T20:26:06.369Z [grades-control-api] info: GET /grade
+2020-06-25T20:27:24.609Z [grades-control-api] info: GET /grade
+2020-06-25T20:27:51.252Z [grades-control-api] info: GET /grade
+2020-06-25T20:28:08.451Z [grades-control-api] info: GET /grade
+2020-06-25T20:28:16.161Z [grades-control-api] info: GET /grade
+2020-06-25T20:28:29.099Z [grades-control-api] info: GET /grade
+2020-06-25T20:29:30.397Z [grades-control-api] info: GET /grade
+2020-06-25T20:37:42.973Z [grades-control-api] info: GET /grade
+2020-06-25T20:37:54.619Z [grades-control-api] info: GET /grade
+2020-06-25T20:38:55.672Z [grades-control-api] info: GET /grade
+2020-06-25T20:39:10.490Z [grades-control-api] info: GET /grade
+2020-06-25T20:39:56.237Z [grades-control-api] info: GET /grade
+2020-06-25T20:40:21.916Z [grades-control-api] info: GET /grade
+2020-06-25T20:41:02.001Z [grades-control-api] info: GET /grade
+2020-06-25T20:42:01.430Z [grades-control-api] info: GET /grade
+2020-06-25T20:43:12.285Z [grades-control-api] info: GET /grade
+2020-06-25T20:43:17.179Z [grades-control-api] info: GET /grade
+2020-06-25T20:43:50.722Z [grades-control-api] info: GET /grade
+2020-06-25T20:44:09.187Z [grades-control-api] info: GET /grade
+2020-06-25T20:44:53.958Z [grades-control-api] info: GET /grade
+2020-06-25T20:48:14.027Z [grades-control-api] info: GET /grade
+2020-06-25T20:48:28.415Z [grades-control-api] info: GET /grade
+2020-06-25T20:48:35.271Z [grades-control-api] info: GET /grade
+2020-06-25T20:48:42.034Z [grades-control-api] info: GET /grade
+2020-06-25T20:50:38.299Z [grades-control-api] info: GET /grade
+2020-06-25T20:52:08.501Z [grades-control-api] info: GET /grade
+2020-06-25T20:54:06.384Z [grades-control-api] info: GET /grade
+2020-06-25T20:54:11.513Z [grades-control-api] info: GET /grade
+2020-06-25T20:54:51.068Z [grades-control-api] info: GET /grade
+2020-06-25T20:55:38.467Z [grades-control-api] info: GET /grade
+2020-06-25T20:55:49.624Z [grades-control-api] info: GET /grade
+2020-06-25T20:55:57.375Z [grades-control-api] info: GET /grade
+2020-06-25T20:57:16.523Z [grades-control-api] info: GET /grade
+2020-06-25T20:57:56.876Z [grades-control-api] info: GET /grade
+2020-06-25T21:01:13.185Z [grades-control-api] info: GET /grade
+2020-06-25T21:01:17.910Z [grades-control-api] info: DELETE /grade - " 4
+2020-06-25T21:01:24.037Z [grades-control-api] info: DELETE /grade - " 1
+2020-06-25T21:01:49.475Z [grades-control-api] info: GET /grade
+2020-06-25T21:02:08.971Z [grades-control-api] info: DELETE /grade - " 8
+2020-06-25T21:02:30.259Z [grades-control-api] info: DELETE /grade - " 2
+2020-06-25T21:02:31.436Z [grades-control-api] info: DELETE /grade - " 5
+2020-06-25T21:05:08.007Z [grades-control-api] info: DELETE /grade - " 6
+2020-06-25T21:05:13.447Z [grades-control-api] info: DELETE /grade - " 3
+2020-06-25T21:05:16.970Z [grades-control-api] info: DELETE /grade - " 9
+2020-06-25T21:05:28.440Z [grades-control-api] info: DELETE /grade - " 23
+2020-06-25T21:05:31.443Z [grades-control-api] info: DELETE /grade - " 20
+2020-06-25T21:05:32.482Z [grades-control-api] info: DELETE /grade - " 26
+2020-06-25T21:05:34.187Z [grades-control-api] info: DELETE /grade - " 22
+2020-06-25T21:05:34.988Z [grades-control-api] info: DELETE /grade - " 19
+2020-06-25T21:05:49.466Z [grades-control-api] info: GET /grade
+2020-06-25T21:05:59.528Z [grades-control-api] info: DELETE /grade - " 13
+2020-06-25T21:06:02.259Z [grades-control-api] info: DELETE /grade - " 17
+2020-06-25T21:06:09.746Z [grades-control-api] info: DELETE /grade - " 10
+2020-06-25T21:06:12.053Z [grades-control-api] info: DELETE /grade - " 16
+2020-06-25T21:06:19.551Z [grades-control-api] info: DELETE /grade - " 27
+2020-06-25T21:06:20.603Z [grades-control-api] info: DELETE /grade - " 21
+2020-06-25T21:06:21.234Z [grades-control-api] info: DELETE /grade - " 24
+2020-06-25T21:06:26.367Z [grades-control-api] info: GET /grade
+2020-06-25T21:06:35.928Z [grades-control-api] info: DELETE /grade - " 12
+2020-06-25T21:06:40.961Z [grades-control-api] info: DELETE /grade - " 25

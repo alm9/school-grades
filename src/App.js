@@ -38,8 +38,21 @@ function App() {
   //   });
   // }, []);
 
-  const handleDelete = () => {
-    console.log('handleDelete');
+  const handleDelete = async (gradeToDelete) => {
+    const isDeleted = await api.deleteGrade(gradeToDelete);
+    console.log(isDeleted);
+
+    if (isDeleted) {
+      const deletedGradeIndex = allGrades.findIndex(
+        (grade) => grade.id === gradeToDelete.id
+      );
+
+      const newGrades = [...allGrades]; //cópia do objeto
+      newGrades[deletedGradeIndex].isDeleted = true;
+      newGrades[deletedGradeIndex].value = 0;
+
+      setAllGrades(newGrades);
+    }
   };
 
   const handlePersist = () => {
