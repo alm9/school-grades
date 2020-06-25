@@ -40,6 +40,8 @@ export default function GradesControl({ grades, onDelete, onPersist }) {
     if (type === 'delete') {
       onDelete(grade);
     }
+
+    onPersist(grade);
   };
 
   //O materialize fornece a classe 'striped', que distingue uma linha da outra:

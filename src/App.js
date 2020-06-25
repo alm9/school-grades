@@ -55,8 +55,9 @@ function App() {
     }
   };
 
-  const handlePersist = () => {
-    console.log('handlePersist');
+  const handlePersist = (grade) => {
+    setSelectedGrade(grade);
+    setIsModalOpen(true);
   };
 
   return (
