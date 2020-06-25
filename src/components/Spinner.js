@@ -16,7 +16,9 @@ export default function Spinner() {
           </div>
         </div>
       </div>
-      <span>Carregando...</span>
+      <span style={{ marginLeft: '10px', fontSize: '1.5rem' }}>
+        Carregando...
+      </span>
     </div>
   );
 }
