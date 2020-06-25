@@ -1,4 +1,5 @@
 import React from 'react';
+import Action from './Action';
 
 export default function GradesControl({ grades, onDelete, onPersist }) {
   //Array tableGrades compõe diversos arrays agrupados por nome e disciplina
@@ -42,12 +43,11 @@ export default function GradesControl({ grades, onDelete, onPersist }) {
           <table className="striped" key={id}>
             <thead>
               <tr>
-                <th>Aluno</th>
-                <th>Disciplina</th>
-                <th>Avaliação</th>
-                <th>Nota</th>
-                {/*&nbsp; = char especial do html para algo ficar vazio (non break space) */}
-                <th>&nbsp;</th>
+                <th style={{ width: '20%' }}>Aluno</th>
+                <th style={{ width: '20%' }}>Disciplina</th>
+                <th style={{ width: '20%' }}>Avaliação</th>
+                <th style={{ width: '20%' }}>Nota</th>
+                <th style={{ width: '20%' }}>Ações</th>
               </tr>
             </thead>
             <tbody>
@@ -58,9 +58,13 @@ export default function GradesControl({ grades, onDelete, onPersist }) {
                       <td>{student}</td>
                       <td>{subject}</td>
                       <td>{type}</td>
-                      <td>{value}</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
+                      <td>{isDeleted ? '-' : value}</td>
+                      <td>
+                        <div>
+                          <Action id-id type={isDeleted ? 'add' : 'edit'} />
+                          {!isDeleted && <Action type="delete" />}
+                        </div>
+                      </td>
                     </tr>
                   );
                 }
