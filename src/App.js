@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import * as api from './api/apiService';
+import Spinner from './components/Spinner';
+
+import '../node_modules/materialize-css/dist/css/materialize.min.css';
+import '../node_modules/materialize-css/dist/js/materialize.min';
 
 // export default function App() {
 function App() {
@@ -35,10 +39,11 @@ function App() {
 
   return (
     <div className="App">
+      {/* <div className="container"> */}
       <header className="App-header">
-        <h1 className="container">Controle de notas</h1>
+        <h1 className="center">Controle de notas</h1>
         {allGrades.length > 0 && <p>Notas disponíveis</p>}
-        {allGrades.length == 0 && <p>Carregando notas...</p>}
+        {allGrades.length == 0 && <Spinner />}
       </header>
     </div>
   );
