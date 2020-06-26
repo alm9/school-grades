@@ -4,7 +4,7 @@ Desenvolvi este app seguindo o roteiro abaixo ✔
 Back End
 --------
 
-(✔) Não detalharei o Back End, pois anteriormente fiz e publiquei no github algo bem similar, chamado backend-school-grades-api.
+(✔) Não detalharei o Back End, pois anteriormente fiz e publiquei no github algo bem similar, chamado backend-grades-escolares-api
 
 Front End
 ---------
