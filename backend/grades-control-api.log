@@ -4767,3 +4767,49 @@
 2020-06-26T02:04:54.377Z [grades-control-api] info: GET /grade
 2020-06-26T02:05:10.897Z [grades-control-api] info: DELETE /grade - " 4
 2020-06-26T02:05:13.928Z [grades-control-api] info: DELETE /grade - " 8
+2020-06-26T02:07:20.634Z [grades-control-api] info: GET /grade
+2020-06-26T02:19:42.499Z [grades-control-api] info: GET /grade
+2020-06-26T02:21:48.564Z [grades-control-api] info: GET /grade
+2020-06-26T02:22:06.168Z [grades-control-api] info: GET /grade
+2020-06-26T02:22:33.764Z [grades-control-api] info: GET /grade
+2020-06-26T02:23:27.308Z [grades-control-api] info: GET /grade
+2020-06-26T02:23:32.118Z [grades-control-api] info: GET /grade
+2020-06-26T02:23:41.082Z [grades-control-api] info: GET /grade
+2020-06-26T02:25:03.356Z [grades-control-api] info: GET /grade
+2020-06-26T02:26:06.187Z [grades-control-api] info: GET /grade
+2020-06-26T02:26:36.473Z [grades-control-api] info: GET /grade
+2020-06-26T02:27:33.676Z [grades-control-api] info: GET /grade
+2020-06-26T02:29:05.299Z [grades-control-api] info: GET /grade
+2020-06-26T02:29:25.880Z [grades-control-api] info: GET /grade
+2020-06-26T02:30:07.442Z [grades-control-api] info: GET /grade
+2020-06-26T02:30:11.736Z [grades-control-api] info: GET /grade
+2020-06-26T02:31:06.797Z [grades-control-api] info: GET /grade
+2020-06-26T02:33:48.169Z [grades-control-api] info: GET /grade
+2020-06-26T02:35:47.320Z [grades-control-api] info: GET /grade
+2020-06-26T02:35:56.166Z [grades-control-api] info: GET /grade
+2020-06-26T02:36:45.979Z [grades-control-api] info: GET /grade
+2020-06-26T02:39:58.635Z [grades-control-api] info: GET /grade
+2020-06-26T02:40:02.323Z [grades-control-api] info: DELETE /grade - " 7
+2020-06-26T02:40:10.989Z [grades-control-api] info: DELETE /grade - " 2
+2020-06-26T02:40:18.482Z [grades-control-api] info: GET /grade
+2020-06-26T02:40:20.469Z [grades-control-api] info: DELETE /grade - " 9
+2020-06-26T02:40:30.341Z [grades-control-api] info: GET /grade
+2020-06-26T02:40:32.341Z [grades-control-api] info: DELETE /grade - " 3
+2020-06-26T02:42:10.136Z [grades-control-api] info: GET /grade
+2020-06-26T02:43:42.809Z [grades-control-api] info: GET /grade
+2020-06-26T02:44:12.179Z [grades-control-api] info: POST /grade - {"id":22,"student":"John Petrucci","studentLowerCase":"john petrucci","subject":"01 - JavaScript","subjectLowerCase":"01 - javascript","type":"Desafio","typeLowerCase":"desafio","value":5,"isDeleted":false,"timestamp":"2020-06-26T02:44:12.178Z"}
+2020-06-26T02:44:12.180Z [grades-control-api] info: POST /grade - {"id":22,"student":"John Petrucci","studentLowerCase":"john petrucci","subject":"01 - JavaScript","subjectLowerCase":"01 - javascript","type":"Desafio","typeLowerCase":"desafio","value":5,"isDeleted":false,"timestamp":"2020-06-26T02:44:12.178Z"}
+2020-06-26T02:44:14.883Z [grades-control-api] info: GET /grade
+2020-06-26T02:44:19.882Z [grades-control-api] info: POST /grade - {"id":23,"student":"John Petrucci","studentLowerCase":"john petrucci","subject":"01 - JavaScript","subjectLowerCase":"01 - javascript","type":"Exercícios","typeLowerCase":"exercícios","value":1,"isDeleted":false,"timestamp":"2020-06-26T02:44:19.882Z"}
+2020-06-26T02:44:19.883Z [grades-control-api] info: POST /grade - {"id":23,"student":"John Petrucci","studentLowerCase":"john petrucci","subject":"01 - JavaScript","subjectLowerCase":"01 - javascript","type":"Exercícios","typeLowerCase":"exercícios","value":1,"isDeleted":false,"timestamp":"2020-06-26T02:44:19.882Z"}
+2020-06-26T02:44:50.455Z [grades-control-api] info: DELETE /grade - " 22
+2020-06-26T02:44:51.139Z [grades-control-api] info: DELETE /grade - " 23
+2020-06-26T02:45:04.802Z [grades-control-api] info: POST /grade - {"id":23,"student":"John Petrucci","studentLowerCase":"john petrucci","subject":"01 - JavaScript","subjectLowerCase":"01 - javascript","type":"Exercícios","typeLowerCase":"exercícios","value":2,"isDeleted":false,"timestamp":"2020-06-26T02:45:04.801Z"}
+2020-06-26T02:45:04.803Z [grades-control-api] info: POST /grade - {"id":23,"student":"John Petrucci","studentLowerCase":"john petrucci","subject":"01 - JavaScript","subjectLowerCase":"01 - javascript","type":"Exercícios","typeLowerCase":"exercícios","value":2,"isDeleted":false,"timestamp":"2020-06-26T02:45:04.801Z"}
+2020-06-26T02:45:13.602Z [grades-control-api] info: POST /grade - {"id":22,"student":"John Petrucci","studentLowerCase":"john petrucci","subject":"01 - JavaScript","subjectLowerCase":"01 - javascript","type":"Desafio","typeLowerCase":"desafio","value":6,"isDeleted":false,"timestamp":"2020-06-26T02:45:13.602Z"}
+2020-06-26T02:45:13.603Z [grades-control-api] info: POST /grade - {"id":22,"student":"John Petrucci","studentLowerCase":"john petrucci","subject":"01 - JavaScript","subjectLowerCase":"01 - javascript","type":"Desafio","typeLowerCase":"desafio","value":6,"isDeleted":false,"timestamp":"2020-06-26T02:45:13.602Z"}
+2020-06-26T02:45:26.984Z [grades-control-api] info: GET /grade
+2020-06-26T02:45:36.779Z [grades-control-api] info: GET /grade
+2020-06-26T02:46:23.855Z [grades-control-api] info: GET /grade
+2020-06-26T02:46:40.406Z [grades-control-api] info: PUT /grade - " {"id":22,"student":"John Petrucci","studentLowerCase":"john petrucci","subject":"01 - JavaScript","subjectLowerCase":"01 - javascript","type":"Desafio","typeLowerCase":"desafio","value":11,"isDeleted":false,"timestamp":"2020-06-26T02:46:40.405Z"}
+2020-06-26T02:46:46.579Z [grades-control-api] info: PUT /grade - " {"id":22,"student":"John Petrucci","studentLowerCase":"john petrucci","subject":"01 - JavaScript","subjectLowerCase":"01 - javascript","type":"Desafio","typeLowerCase":"desafio","value":14,"isDeleted":false,"timestamp":"2020-06-26T02:46:46.579Z"}

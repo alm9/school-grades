@@ -19,7 +19,7 @@ export default function ModalGrade({ onSave, onClose, selectedGrade }) {
       const validation = await api.getValidationFromGradeType(type);
       setGradeValidation(validation);
     };
-    // valide();
+    valide();
   }, [type]);
 
   useEffect(() => {
@@ -46,15 +46,22 @@ export default function ModalGrade({ onSave, onClose, selectedGrade }) {
     }
   };
 
-  const handleFormSubmit = (event) => {};
+  const handleFormSubmit = (event) => {
+    event.preventDefault(); //não envia o formulário, o programador deve tratar
 
-  const handleClose = () => {
+    const formData = {
+      id,
+      newValue: gradeValue,
+    };
+    onSave(formData);
+    console.log(event);
+  };
+
+  const handleModalClose = () => {
     onClose(null);
   };
 
   const handleGradeChange = (event) => {
-    // console.log(event.target.value);
-    console.log(gradeValidation);
     setGradeValue(+event.target.value); //+ ou Number
   };
 
@@ -65,60 +72,60 @@ export default function ModalGrade({ onSave, onClose, selectedGrade }) {
           <span style={styles.title}>Manutenção de notas</span>
           <button
             className="waves-effect waves-lights btn red dark-4"
-            onClick={handleClose}
+            onClick={handleModalClose}
           >
             X
           </button>
         </div>
 
-        <form onSubmit={handleFormSubmit}></form>
+        <form onSubmit={handleFormSubmit}>
+          <div className="input-field">
+            <input id="inputName" type="text" value={student} readOnly />
+            <label className="active" htmlFor="inputName">
+              Nome do aluno:
+            </label>
+          </div>
 
-        <div className="input-field">
-          <input id="inputName" type="text" value={student} readOnly />
-          <label className="active" htmlFor="inputName">
-            Nome do aluno:
-          </label>
-        </div>
+          <div className="input-field">
+            <input id="inputSubject" type="text" value={subject} readOnly />
+            <label className="active" htmlFor="inputName">
+              Disciplina
+            </label>
+          </div>
 
-        <div className="input-field">
-          <input id="inputSubject" type="text" value={subject} readOnly />
-          <label className="active" htmlFor="inputName">
-            Disciplina
-          </label>
-        </div>
+          <div className="input-field">
+            <input id="inputType" type="text" value={type} readOnly />
+            <label className="active" htmlFor="inputName">
+              Tipo de Avaliação
+            </label>
+          </div>
 
-        <div className="input-field">
-          <input id="inputType" type="text" value={type} readOnly />
-          <label className="active" htmlFor="inputName">
-            Tipo de Avaliação
-          </label>
-        </div>
+          <div className="input-field">
+            <input
+              id="inputGrade"
+              type="number"
+              min={gradeValidation.minValue}
+              max={gradeValidation.maxValue}
+              step="1"
+              autoFocus
+              value={gradeValue}
+              onChange={handleGradeChange}
+            />
+            <label className="active" htmlFor="inputGrade">
+              Nota:
+            </label>
+          </div>
 
-        <div className="input-field">
-          <input
-            id="inputGrade"
-            type="number"
-            min={gradeValidation.minValue}
-            max={gradeValidation.maxValue}
-            step="1"
-            autoFocus
-            value={gradeValue}
-            onChange={handleGradeChange}
-          />
-          <label className="active" htmlFor="inputGrade">
-            Nota:
-          </label>
-        </div>
-
-        <div style={styles.flexRow}>
-          <button
-            className="waves-effect waves-light btn"
-            disabled={errorMessage.trim() !== ''}
-          >
-            Salvar
-          </button>
-          <span style={styles.errorMessage}>{errorMessage}</span>
-        </div>
+          <div style={styles.flexRow}>
+            <button
+              className="waves-effect waves-light btn"
+              disabled={errorMessage.trim() !== ''}
+            >
+              Salvar
+            </button>
+            <span style={styles.errorMessage}>{errorMessage}</span>
+          </div>
+        </form>
       </Modal>
     </div>
   );
