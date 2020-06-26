@@ -26,7 +26,7 @@ function App() {
       const grades = await api.getAllGrades();
       setTimeout(() => {
         setAllGrades(grades);
-      }, 2000);
+      }, 200);
     };
     getGrades();
   }, []);
@@ -71,7 +71,7 @@ function App() {
       {/* <div className="container"> */}
       <header className="App-header">
         <h1 className="center">Controle de notas</h1>
-        {allGrades.length == 0 && <Spinner />}
+        {allGrades.length === 0 && <Spinner />}
         {allGrades.length > 0 && (
           <GradesControl
             grades={allGrades}

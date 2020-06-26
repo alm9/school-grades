@@ -14,9 +14,12 @@ export default function ModalGrade({ onSave, onClose, selectedGrade }) {
   const [gradeValidation, setGradeValidation] = useState({});
   const [errorMessage, setErrorMessage] = useState('');
 
-  useEffect(() => {
-    const validation = api.getValidationFromGradeType(type);
-    setGradeValidation(validation);
+  useEffect(async () => {
+    const valide = async () => {
+      const validation = await api.getValidationFromGradeType(type);
+      setGradeValidation(validation);
+    };
+    valide();
   }, [type]);
 
   useEffect(() => {
@@ -45,9 +48,29 @@ export default function ModalGrade({ onSave, onClose, selectedGrade }) {
 
   const handleFormSubmit = (event) => {};
 
+  const handleClose = () => {
+    onClose(null);
+  };
+
+  const handleGradeChange = (event) => {
+    // console.log(event.target.value);
+    console.log(gradeValidation);
+    setGradeValue(+event.target.value); //+ ou Number
+  };
+
   return (
     <div>
       <Modal isOpen={true}>
+        <div style={styles.flexRow}>
+          <span style={styles.title}>Manutenção de notas</span>
+          <button
+            className="waves-effect waves-lights btn red dark-4"
+            onClick={handleClose}
+          >
+            X
+          </button>
+        </div>
+
         <form onSubmit={handleFormSubmit}></form>
 
         <div className="input-field">
@@ -80,13 +103,43 @@ export default function ModalGrade({ onSave, onClose, selectedGrade }) {
             step="1"
             autoFocus
             value={gradeValue}
-            // onChange={handleGradeChange}
+            onChange={handleGradeChange}
           />
           <label className="active" htmlFor="inputGrade">
             Nota:
           </label>
         </div>
+
+        <div style={styles.flexRow}>
+          <button
+            className="waves-effect waves-light btn"
+            disabled={errorMessage.trim() !== ''}
+          >
+            Salvar
+          </button>
+          <span style={styles.errorMessage}></span>
+        </div>
       </Modal>
     </div>
   );
 }
+
+const styles = {
+  flexRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContents: 'space-between',
+    marginBottom: '40px',
+  },
+
+  title: {
+    fontSize: '1.3rm',
+    fontWeight: 'bold',
+  },
+
+  errorMessage: {
+    color: 'red',
+    fontWeight: 'bold',
+  },
+};
