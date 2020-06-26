@@ -7,6 +7,7 @@ import Spinner from './components/Spinner';
 import '../node_modules/materialize-css/dist/css/materialize.min.css';
 import '../node_modules/materialize-css/dist/js/materialize.min';
 import GradesControl from './components/GradesControl';
+import ModalGrade from './components/ModalGrade';
 
 // export default function App() {
 function App() {
@@ -14,7 +15,7 @@ function App() {
   //usando hooks:
   const [allGrades, setAllGrades] = useState([]);
   const [selectedGrade, setSelectedGrade] = useState({});
-  const [isModelOpen, setIsModelOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // useEffect(() => {
   //   api.getAllGrades().then((grades) => setAllGrades(grades));
@@ -60,6 +61,11 @@ function App() {
     setIsModalOpen(true);
   };
 
+  const handlePersistData = () => {};
+  const handleClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="App">
       {/* <div className="container"> */}
@@ -71,6 +77,14 @@ function App() {
             grades={allGrades}
             onDelete={handleDelete}
             onPersist={handlePersist}
+          />
+        )}
+
+        {isModalOpen && (
+          <ModalGrade
+            onSave={handlePersistData}
+            onClose={handleClose}
+            selectedGrade={selectedGrade}
           />
         )}
       </header>
