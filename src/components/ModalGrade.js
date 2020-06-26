@@ -14,12 +14,12 @@ export default function ModalGrade({ onSave, onClose, selectedGrade }) {
   const [gradeValidation, setGradeValidation] = useState({});
   const [errorMessage, setErrorMessage] = useState('');
 
-  useEffect(async () => {
+  useEffect(() => {
     const valide = async () => {
       const validation = await api.getValidationFromGradeType(type);
       setGradeValidation(validation);
     };
-    valide();
+    // valide();
   }, [type]);
 
   useEffect(() => {
@@ -117,7 +117,7 @@ export default function ModalGrade({ onSave, onClose, selectedGrade }) {
           >
             Salvar
           </button>
-          <span style={styles.errorMessage}></span>
+          <span style={styles.errorMessage}>{errorMessage}</span>
         </div>
       </Modal>
     </div>
